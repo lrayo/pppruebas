@@ -1,10 +1,39 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reporte SIG - TIEMPOS S.A.S</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function displayDate() {
+            var today = new Date();
+            var options = { year: 'numeric', month: 'long', day: 'numeric' };
+            var formattedDate = today.toLocaleDateString('es-ES', options);
+            var time = today.toLocaleTimeString('es-ES');
+            document.getElementById('fecha').textContent = 'Generado el ' + formattedDate + ', ' + time;
+        }
+    </script>
 </head>
-<body>
-   <iframe title="kpi_operaciones_3" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=856c02a0-07e5-4e25-a234-5399c2852367&autoAuth=true&ctid=2bac32fd-d9a2-40d9-a272-3a35920f5607" frameborder="0" allowFullScreen="true"></iframe>
+<body onload="displayDate()">
+    <div class="header">
+        <div class="logo">
+            <img src="image.png" alt="Logo">
+        </div>
+        <div class="info-centrada">
+            <div id="fecha" class="fecha"></div>
+            <div class="responsable">Responsable del informe: Jefe(a) de Operaciones</div>
+        </div>
+        <div class="titulo">
+            <h1>SIG - TIEMPOS S.A.S</h1>
+            <h2>KPI-Operaciones</h2>
+        </div>
+    </div>
+    <div class="objetivo">
+        <strong>OBJETIVO:</strong> Este reporte resume el total de empleados, según los criterios de Seguridad Social, totalizando por NIT del Trabajador en Misión.
+    </div>
+    <div class="iframe-container">
+        <iframe title="kpi_operaciones_4" width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiMDY3NzgxMjQtMzQ4MS00NWM3LWI5NDYtMTgyMmQxNDVmYjcyIiwidCI6ImMxNmY3ZTUwLWQzNmMtNGFkNy05YTIxLTVlZmIxMTdjOTgxOCIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
 </body>
 </html>
